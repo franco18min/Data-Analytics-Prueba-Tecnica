@@ -57,9 +57,9 @@ La prueba 2 fue desarrollada siguiendo los pasos a continuación:
 
 ## Diagrama
 
-#<div align="center">
-  #<img src="
-
+<div align="center">
+  #<img src= "https://github.com/franco18min/Data-Analytics-Prueba-Tecnica/blob/main/Diagrama%20ER.png"  width="500" height="400">
+</div>
 ## Arquitectura
 **Tabla students_student**
 
