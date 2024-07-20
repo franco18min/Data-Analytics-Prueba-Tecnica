@@ -45,9 +45,9 @@ La prueba 2 busca alcanzar los siguientes objetivos especificos:
 ## Pasos
 La prueba 1 fue desarrollada siguiendo los pasos a continuación:
 
-1. Se trabajo el primer analisis en [Analisis_Limpieza_Datos.ipynb](Analisis_Limpieza_Datos.ipynb) donde se hizo los primeros pasos ,desde la carga del archivo excel hasta las tranformaciones de las columnas que daban informacion general de cada registro y las columnas relacionadas con los alumnos. Este archivo muetra parte de mi metodologia de trabajo y observaciones.
+1. Se trabajo el primer analisis en [Analisis_Limpieza_Datos.ipynb](Analisis_Limpieza_Datos.ipynb) donde se hizo los primeros pasos ,desde la carga del archivo excel hasta las tranformaciones de las columnas que daban informacion general de cada registro y las columnas relacionadas con los alumnos. Este archivo muestra parte de mi metodologia de trabajo y observaciones.
 2. Luego de haber trabajado en ese archivo se guardo el dataframe como csv ([Alumnos y padres parcial.csv](Alumnos%20y%20padres%20parcial.csv))
-3. Finalmente se hicieron los ultimos cambios en las columnas relacionadas a los padres leyendo el csv guardado, se hizco para tener dos jupyter distintos y no hacer tan engorrosa la documentacion, ademas de que los pasos fueron casi iguales al del primer jupiter. El archivo final y limpio es [Alumnos y padres limpio.csv](Alumnos%20y%20padres%20limpio.csv)
+3. Finalmente se hicieron los ultimos en cambios en el archivo [Analisis_Limpieza_Padres.ipynb](Analisis_Limpieza_Padres.ipynb) y las columnas relacionadas a los padres leyendo el csv guardado, se hizco para tener dos jupyter distintos y no hacer tan engorrosa la documentacion, ademas de que los pasos fueron casi iguales al del primer jupiter. El archivo final y limpio es [Alumnos y padres limpio.csv](Alumnos%20y%20padres%20limpio.csv)
 
 La prueba 2 fue desarrollada siguiendo los pasos a continuación:
 1. Se cargo en una base de datos el script [db.sql](db.sql)
