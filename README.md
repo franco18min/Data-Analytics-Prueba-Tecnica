@@ -1,8 +1,9 @@
-![header](https://capsule-render.vercel.app/api?type=rect&height=120&section=header&text=%20Prueba%20Tecnica%20Data%20Quality%20Enginner&fontSize=30&&color=04045b&fontColor=ffffff&font)
+
 <div align="center">
-  <img src="https://th.bing.com/th/id/OIP.D5j4O42f84oip3otPzpPYwAAAA?rs=1&pid=ImgDetMain" width="200" height="150">
+  <img src="https://cdn.prod.website-files.com/6323af3a160e0a067e91428a/640692e652648a6b2a90d734_Group.svg" width="200" height="150">
 </div>
 
+![header](https://capsule-render.vercel.app/api?type=rect&height=120&section=header&text=%20Prueba%20Tecnica%20Data%20Analytics&fontSize=30&&color=#e8373e&fontColor=ffffff&font)
 
 
 
