@@ -3,9 +3,10 @@
   <img src="https://cdn.prod.website-files.com/6323af3a160e0a067e91428a/640692e652648a6b2a90d734_Group.svg" width="200" height="150">
 </div>
 
-![header](https://capsule-render.vercel.app/api?type=rect&height=120&section=header&text=%20Prueba%20Tecnica%20Data%20Analytics&fontSize=30&&color=#e8373e&fontColor=ffffff&font)
+<div align="center">
 
-
+# Prueba tecnica data analytics
+</div>
 
 ## Indice
 <!-- TABLE OF CONTENTS -->
@@ -13,48 +14,99 @@
   <summary>Tabla de contenido</summary>
   <ol>
     <li><a href="#Introducción">Introducción</a></li>
-    <li><a href="#Objetivo">Objetivo</a></li>
-    <li><a href="#Alcance">Alcance</a></li>
-    <li><a href="#Tecnologías">Tecnologías Utilizadas</a></li>
-    <li><a href="#Conclusiones relevantes">Conclusiones relevantes</a></li>
+    <li><a href="#Objetivos">Objetivos</a></li>
+    <li><a href="#Pasos">Pasos</a></li>
+    <li><a href="#Diagrama">Diagrama</a></li>
+    <li><a href="#Arquitectura">Arquitectura</a></li>
+    <li><a href="#Riesgo">Riesgo</a></li>
     <li><a href="#Desarrollador">Desarrollador</a></li>
   </ol>
 </details>
 
 ## Introducción
-Esta es la prueba tecnica para la empresa R5. 
+Esta es el repisotorio para las pruebas de la empresa Cometa para el cargo de Data Analytics.
 
-Esta prueba propone hacer un reporte de calidad de datos con archivo JSON 
+## Objetivos
+**El objetivo consister en realizar dos pruebas, una en jupyter notebook y otra en una base de datos SQL.**
 
-## Objetivo
-El objetivo es realizar el reporte de calidad de datos con el fin de dar a conocer el nivel de detalle a la hora de reportar anomalias. 
+La prueba 1 busca alcanzar los siguientes objetivos especificos:
+- Extraer los datos, tranformarlos y cargarlos.
+- Identificar y manejar los valores faltantes. 
+- Eliminar o validar que no existan duplicados.
+- Corregir cualquier dato malformado.
 
-La prueba busca alcanzar los siguientes objetivos especificos:
-- Transformar los datos a un formato adecuado para realizar el reporte.
-- Sacar conclusiones a partir del reporte hecho.
+La prueba 2 busca alcanzar los siguientes objetivos especificos:
+- Consultar para validar que no haya students o fulfillments repetidos.
+- Consultar y analizar los ingresos del colegio para considerar que existe algún riesgo financiero o no
 
-## Alcance
-La prueba fue desarrollada siguiendo los pasos a continuación:
 
-1. Pre-procesamiento de datos del archivo JSON en donde hemos desanidado complementamente los mismo para tener un dataframe plano facil de manipular. [spotify_json_to_csv.py](spotify_json_to_csv.py)
-2. Desarrollo del reporte de calidad de datos que sera el mismo archivo ipynb que se encuentra en este repositorio. [SpotifyDataQualityAnalysis.ipynb](SpotifyDataQualityAnalysis.ipynb)
 
-## Tecnologías
-![Pycharm](https://img.shields.io/badge/Pycharm-000000?style=for-the-badge&logo=Pycharm&logoColor=white)
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-%23F37626.svg?style=for-the-badge&logo=Jupyter&logoColor=white)
-![Json](https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=JSON&logoColor=white&color=green)
-![Seaborn](https://img.shields.io/badge/Seaborn-000000?style=for-the-badge&logo=Seaborn&logoColor=white&color=purple)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-000000?style=for-the-badge&logo=Matplotlib&logoColor=white&color=light)
 
-## Conclusiones relevantes
-1. **Conclusiones**
-- Tenemos dos albumes con nombre nulo que sumado ambos son un total de 62 canciones en nuestro dataset
-- Tenemos datos repetidos en las columnas "id" y "track_id" que que pertenecen a las canciones.
-- Tenemos datos en "instrumentalness" que tiene un formato incorrecto y podria causar errores para analisis posteriores.
-- Tenemos 3 columnas "artist_name", "artist_id" y "artist_popularity" que no estarian aportando informacion relevante para el analisis de calidad de datos ya que todo el dataset corresponde a la cantante Taylor Swift.
-- Como punto final di recomendaciones que podrian servir para mejorar la calidad de datos en el futuro.
+## Pasos
+La prueba 1 fue desarrollada siguiendo los pasos a continuación:
+
+1. Se trabajo el primer analisis en [Analisis_Limpieza_Datos.ipynb](Analisis_Limpieza_Datos.ipynb) donde se hizo los primeros pasos ,desde la carga del archivo excel hasta las tranformaciones de las columnas que daban informacion general de cada registro y las columnas relacionadas con los alumnos. Este archivo muetra parte de mi metodologia de trabajo y observaciones.
+2. Luego de haber trabajado en ese archivo se guardo el dataframe como csv ([Alumnos y padres parcial.csv](Alumnos%20y%20padres%20parcial.csv))
+3. Finalmente se hicieron los ultimos cambios en las columnas relacionadas a los padres leyendo el csv guardado, se hizco para tener dos jupyter distintos y no hacer tan engorrosa la documentacion, ademas de que los pasos fueron casi iguales al del primer jupiter. El archivo final y limpio es [Alumnos y padres limpio.csv](Alumnos%20y%20padres%20limpio.csv)
+
+La prueba 2 fue desarrollada siguiendo los pasos a continuación:
+1. Se cargo en una base de datos el script [db.sql](db.sql)
+2. Se hicieron consultas para poder ver los datos faltantes. El archivo es [Prueba tecnica.sql](Prueba%20tecnica.sql)
+3. Se hicieron consultas para poder poder analizar si hay un riesgo financiero o no(Las conclusiones estaran mas abajo)
+4. Se interpreto la arquitectura de datos y se hizo un diagrama entidad relacion en base al achivo [db.sql](db.sql) (Mas abajo se mostrara)
+
+## Diagrama
+
+#<div align="center">
+  #<img src="
+
+## Arquitectura
+**Tabla students_student**
+
+Esta tabla almacena información sobre los estudiantes. Veamos el significado de cada columna:
+1. id: Un identificador único para cada estudiante.
+2. hash: Este campo podría estar relacionado con la seguridad o el hash de datos.
+3. created y modified: Estas columnas registran las fechas y horas en que se creó o modificó un registro.
+4. archived: Un valor booleano que indica si el estudiante está archivado o no.
+5. first_name y last_name: Estos campos almacenan los nombres y apellidos del estudiante.
+6. gender: El género del estudiante.
+7. birthdate: La fecha de nacimiento del estudiante.
+8. identifier: Un identificador adicional, como un número de matrícula.
+9. created_by_id: El ID del usuario que creó el registro del estudiante.
+10. school_id y section_id: Estos campos se relacionan con la escuela y la sección a la que pertenece el estudiante.
+11. billing_guardian_id: El ID del responsable de facturación asociado con el estudiante probablemente.
+12. enrollment_code: Un código que podria relacionarse con algun curso.
+13. deleted y deleted_by_cascade: Información sobre eliminación de registros.
+14. entry_date: La fecha en que el estudiante ingresó a la escuela.
+15. is_active: Indica si el estudiante esta activo o no.
+16. inscription_status: El estado de inscripción del estudiante.
+17. is_ready: Si el estudiante está listo para comenzar.
+18. state: El estado general del estudiante.
+
+**Tabla fulfillments**
+
+Esta tabla esta relacionada con pagos o cumplimiento de órdenes.
+1. id: Un identificador único para cada registro de cumplimiento.
+2. student_id: El ID del estudiante asociado con este cumplimiento.
+3. order_id: El ID de la orden relacionada con este cumplimiento (por ejemplo, una factura o pedido).
+4. total, total_paid y total_remaining: Estos campos almacenan información sobre los montos totales, pagados y pendientes en relación con la orden.
+5. paid_date: La fecha en que se realizó el pago.
+6. status: El estado del cumplimiento.
+7. discount_breakdown: Un campo que podría contener detalles sobre los descuentos aplicados (generalmente en formato JSON).
+
+**Relaciones entre las tablas**
+
+- Segun el archivo [db.sql](db.sql) y haciendo el diagrama no pude encontrar alguna relacion entre las tablas que se pueda graficasr, pero se puede hacer alguna modificacioin en la columna "student_id" para poder aplicar el foreign key en el id de la tabla students_student.
+- A pesar de esto las tablas tienen una relacion no grafica a la hora de trabajar en sql ya que se puede unir informacion de alumnos con los cumplimientos y asi poder hacer analisis.
+
+## Riesgo
+
+1. Analizando las consultas donde el monto total a pagar fue 30959231 mientras que la cantidad pagada 1202471, no podriamos deducir si hay un riesgo ya que no disponemos de las reservas de al institucion para ir determinando en el tiempo si la tendencia pueda ser buena o mala.
+2. Tambien podemos notar que aquellos alumnos que se han inscrito han pagado casi en su totalidad el total, pero observamos que  fuero poco alumnos, por lo que puedo concluier que tal vez estan en epoca donde las clases ya estan en curso, ya que usalmente la gente suele inscribirse a principio de año
+3. Tenemos alumnos en estado pendiente, es decir estan completando el proceso de inscripcion y han pagado un parte inicial del total, esto puede ser una buena señal ya que es problable que el alumno termine de realizar la inscripcion o el proceso y pague el total faltante.
+4. Tambien tenemos alumnos que no han iniciado el proceso, han pagado pero podrian cancelar el pago y talvez pedir una devolucion. Esto no podria ser bueno para la institucion
+5. En sintesis no puedo determianr si hay un riesgo financiero ya que estos datos fueron tomados en un determinado tiempo, aun que la sitacion respecto a los pagos pudiera ser malas, depende en que momento del año se esten tomando los datos y ademas seria importante conocer los gastos de la institucion.
+
 
 ## Desarrollador
 <div align="center">
